@@ -391,8 +391,12 @@ class AIDealCheckerApp:
     
     def _setup_api(self):
         API_KEY = st.secrets.get("GEMINI_API_KEY", "")
-        if not API_KEY: st.error("Missing GEMINI_API_KEY in Streamlit secrets."); st.stop()
-        if not GEMINI_AVAILABLE: st.error("Google Generative AI package not available."); st.stop()
+        if not API_KEY: 
+            st.error("Missing GEMINI_API_KEY in Streamlit secrets.")
+            st.stop()
+        if not GEMINI_AVAILABLE: 
+            st.error("Google Generative AI package not available.")
+            st.stop()
         self.gemini_client = GeminiClient(API_KEY)
     
     def _setup_sheets(self):
@@ -403,4 +407,4 @@ class AIDealCheckerApp:
     def _setup_ui(self):
         self.theme_manager.inject_auto_theme()
         st.title("🚗 AI Deal Checker")
-        st.caption(f"U.S. Edition (Pro) v{CONFIG.APP_VERSION} | Auto Theme • ROI Forecasting (Gemini 2.5 Pro)
+        st.caption(f"U.S. Edition (Pro) v{CONFIG.APP_VERSION}
