@@ -581,4 +581,4 @@ Context (immutable numbers):
         elif name_l == "maintenance":
             base = f"Estimated annual maintenance is {level}; based on U.S. data (RepairPal/YourMechanic)."
         elif name_l == "tco":
-            base = f"TCO (fuel/insurance/repairs) is {level} vs U.S. 
+            base = f"TCO (fuel/insurance/repairs) is {level} vs U.S.
