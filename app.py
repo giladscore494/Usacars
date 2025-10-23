@@ -493,4 +493,6 @@ def main():
         "mileage": mileage_score,
         "reliability": reliability_score,
         "tco": tco_score,
-        "
+        "fit": fit_score,
+        "title": 70.0  # default; refined if user provides
+    }
